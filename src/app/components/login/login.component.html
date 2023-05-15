@@ -1,0 +1,23 @@
+
+
+<form [formGroup]="loginForm" (submit)="login()" >
+    <p>Email</p>
+    <input  
+        required
+        type="text"
+        formControlName="email"
+        id="email"
+    >
+    <br>
+    <p>Password</p>
+    <input 
+        required 
+        type="password"
+        formControlName="password"
+        id="password"
+    >
+    <button type="submit">Login</button>
+
+    <p *ngIf="error" class="errorMessage">Your credentials are not correct</p>
+
+</form>

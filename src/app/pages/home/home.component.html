@@ -1,0 +1,16 @@
+<div class="home-component">
+    <nav class="navBar">
+        <p>Home Page</p>
+        <button (click)="logout()">Logout</button>
+    </nav>
+    <div class="content">
+        <p *ngIf="email">Greetings {{email}} !</p>
+        <div>
+            <p>Date:</p>
+            <p>{{currentTime }}</p>
+        </div>
+        <div></div>
+    </div>
+    <app-cards></app-cards>
+</div>
+<router-outlet></router-outlet>
